@@ -8,14 +8,15 @@ html {
     font-size: 62.5%;
 }
 header {
-    display: flex;
+    display: grid;
     justify-content: center;
 }
 header section{
+    width: 100vw;
+    max-width: 975px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: 54px;
-    width: 975px;
     background-color: #fff;
     align-content: center;
     justify-content: center;
@@ -27,7 +28,7 @@ header section{
     text-align: center;
 }
 #buscar {
-    border: solid 1px rgba(var(--b6a,219,219,219),1);
+    border: solid 1px rgb(219, 219, 219);
     text-align: center;
     color: gray;
     height: 28px;
@@ -60,7 +61,7 @@ main {
     padding: 30px 0;
     display: grid;
     justify-content: center;
-    grid-template: [inicio-row]1fr [second-row] 1fr 1fr [fin-row]/ 1fr 1fr 1fr;
+    grid-template: [inicio-row]1fr [second-row] 1fr 1fr [fin-row]/ repeat(3, 1fr);
     gap: 5px;
     /* border: 1px solid red; */
 }
@@ -92,6 +93,12 @@ button {
 }
 .activity {
     font-size: 1.8rem;
+    grid-column: 2 / span 2;
+    display: flex;
+    
+}
+.activity p {
+    margin-right: 25px;
 }
 .main-navbar{
     display: flex;
@@ -110,6 +117,7 @@ button {
     justify-content: center;
     grid-template: 1fr / repeat(3, minmax(100px,293px));
     gap: 28px;
+    height: 100%;
 }
 .post {
     cursor: pointer;
@@ -145,20 +153,4 @@ button {
     width: 80px;
     margin: 5px;
     font-weight: bold;
-}
-
-@media screen and (max-width: 768px) {
-    header section{
-        grid-template-columns: repeat(2, 1fr);
-        height: 54px;
-    }
-    .buscar {
-        display: none;
-    }
-    .nav-bar {
-        justify-content: end;
-    }
-    .post-list {
-        gap: 3px;
-    }
 }
