@@ -1,0 +1,17 @@
+
+header section{
+    grid-template-columns: repeat(2, 1fr);
+    height: 54px;
+    /* max-width: 975px;
+    width: 100%; */
+}
+.buscar {
+    display: none;
+}
+.nav-bar {
+    justify-content: end;
+}
+.post-list {
+    gap: 3px;
+    margin: 0 3px;
+}
