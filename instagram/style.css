@@ -7,9 +7,6 @@ html {
     font-family: 'Quicksand', sans-serif;
     font-size: 62.5%;
 }
-body {
-    background-color: #fafafa;
-}
 header {
     display: flex;
     justify-content: center;
@@ -53,13 +50,66 @@ nav {
 }
 main {
     background-color: #fafafa;
+    border-top: 1px solid rgb(218, 215, 215);
+    /* max-width: 975px; */
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+}
+.hero {
+    padding: 30px 0;
+    display: grid;
+    justify-content: center;
+    grid-template: [inicio-row]1fr [second-row] 1fr 1fr [fin-row]/ 1fr 1fr 1fr;
+    gap: 5px;
+    /* border: 1px solid red; */
+}
+.profile-img {
+    display: inherit;
+    width: 150px;
+    position: relative;
+    grid-row: inicio-row / fin-row;
+    vertical-align: bottom;
+    margin: auto auto;
+}
+.profile-img img{
+    border-radius: 100%;
+    width: 100%;
+}
+.profile-information {
+    display: flex;
+    font-size: 3rem;
+    grid-column: 2 / span 2;
+}
+button {
+    font-size: 1.5rem;
+    margin: 0 15px;
+    width: 94px;
+    height: 29px;
+    border: .1px solid gainsboro;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.activity {
+    font-size: 1.8rem;
+}
+.main-navbar{
+    display: flex;
+    border-top: 1px solid gainsboro;
+    height: 75px;
+    font-size: 2rem;
+    align-items: center;
+    justify-content: space-around;
+}
+.main-navbar p {
+    display: flex;
+    
 }
 .post-list {
     display: grid;
     justify-content: center;
     grid-template: 1fr / repeat(3, minmax(100px,293px));
     gap: 28px;
-    border-top: 1px solid rgb(218, 215, 215);
 }
 .post {
     cursor: pointer;
@@ -98,8 +148,17 @@ main {
 }
 
 @media screen and (max-width: 768px) {
+    header section{
+        grid-template-columns: repeat(2, 1fr);
+        height: 54px;
+    }
+    .buscar {
+        display: none;
+    }
+    .nav-bar {
+        justify-content: end;
+    }
     .post-list {
         gap: 3px;
     }
-
 }
