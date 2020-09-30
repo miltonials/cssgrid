@@ -1,0 +1,24 @@
+header section {
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+.nav-bar {
+    justify-content: center;
+}
+.profile-img {
+    width: 10rem;
+}
+.profile-information {
+    grid-row-start: 2;
+}
+h5 {
+    text-align: center;
+}
+.activity {
+    grid-column: 1 / -1;
+    grid-row-start: 4;
+    text-align: center;
+}
+.profile-information svg{
+    display: none;
+}
