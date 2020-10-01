@@ -15,3 +15,14 @@ header section{
     gap: 3px;
     margin: 0 3px;
 }
+footer, footer button{
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    z-index: 3;
+    background: #23475b52;
+    border: 1px solid #ffffff4d;
+    border-radius: .5rem;
+    height: 3rem;
+}

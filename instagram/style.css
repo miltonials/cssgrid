@@ -154,3 +154,7 @@ button {
     margin: 5px;
     font-weight: bold;
 }
+
+footer {
+    display: none;
+}

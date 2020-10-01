@@ -97,7 +97,9 @@ body {
 .countdown span:last-child:after {
     display: none;
 }
-
+footer {
+    display: none;
+}
 @media screen and (max-width:768px) {
     .hero {
         grid-template-columns: 7rem 1fr;
@@ -105,5 +107,16 @@ body {
                              ". description"
                              "formulario formulario"
                              "countdown countdown";
+    }
+    footer, footer button{
+        display: inline-block;
+        position: fixed;
+        bottom: 0;
+        width: 100vw;
+        z-index: 3;
+        background: #23475b52;
+        border: 1px solid #ffffff4d;
+        border-radius: .5rem;
+        height: 3rem;
     }
 }
